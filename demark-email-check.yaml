@@ -1,0 +1,14 @@
+name: Make sure commit author is from demark.com
+run-name: ${{ github.actor }} - ${{ github.event_name }} - ${{ github.event.ref }}
+on: [push]
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: check that email is from demark.com
+        uses: DeMarkAnalytics/commit-author-action@master
+        with:
+          email_domain: 'demark.com,symbolik.com'
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          error_on_fail: 'true'
+
