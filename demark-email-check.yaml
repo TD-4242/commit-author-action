@@ -1,6 +1,6 @@
 name: Make sure commit author is from demark.com
 run-name: ${{ github.actor }} - ${{ github.event_name }} - ${{ github.event.ref }}
-on: [push]
+on: push
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
