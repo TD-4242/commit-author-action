@@ -8,7 +8,7 @@ jobs:
       - name: check that email is from demark.com
         uses: DeMarkAnalytics/commit-author-action@master
         with:
-          email_domain: 'demark.com,symbolik.com'
+          email_domain: 'demark.com,symbolik.com,shakuro.com'
           github_token: ${{ secrets.GITHUB_TOKEN }}
           error_on_fail: 'true'
 
